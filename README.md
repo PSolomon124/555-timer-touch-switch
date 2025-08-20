@@ -1,5 +1,6 @@
 How the Circuit Works
 
+
 The Touch Input (555 Timer): The NE555 timer (U1) is the heart of the touch-sensing part of the circuit. It's configured as a monostable multivibrator, meaning it produces a single, stable output pulse when triggered. The touch point is connected to the trigger pin (2) and a resistor R1 is connected to the threshold pin (6). When the touch point is grounded by a finger, it sends a brief low signal to the trigger pin. This causes the 555 timer to output a short pulse.
 
 The Latching Mechanism (D-Flip-Flop): The output pulse from the 555 timer is sent to the clock input (CLK) of a D-Flip-Flop (U3). A D-Flip-Flop is a type of memory element that changes its output state on the edge of a clock pulse. The output (Q) is fed back to the input (D), creating a "toggle" effect. Each time the 555 timer sends a pulse, the D-Flip-Flop's output (Q) toggles between a high and low state, effectively remembering the "on" or "off" state.
